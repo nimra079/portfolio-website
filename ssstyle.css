@@ -1,0 +1,445 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcfdff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #003366;
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s;
+}
+
+.hamburger:hover {
+  color: #00bfff;
+}
+
+.navbar .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.navbar .nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-menu li a:hover {
+  color: #00bfff;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url(hero-image.jpg);
+  color: white;
+  text-align: center;
+  padding: 100px 5%;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.80);
+  background-blend-mode: darken;
+  margin-top: 0;
+}
+
+/* About Section */
+.about {
+  height: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.about-text {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  height: 350px;
+  width: 280px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.grey, .white, .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.grey {
+  background-color: #EBECEC;
+  transform: rotate(12deg);
+}
+
+.white {
+  background-color: white;
+  transform: rotate(6deg);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Consistent Container for Services, Portfolio, Contact */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Services Section */
+#services {
+  padding-top: 10px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  margin-top: 20px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  border-left: 5px solid #003366;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  transition: transform 0.3s, border-color 0.3s;
+  min-height: 120px;
+  font-size: 1.3em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Unique background images for service cards */
+.service-card:nth-child(1) { background-image: url('service1.jpg'); }
+.service-card:nth-child(2) { background-image: url('service2.jpeg'); }
+.service-card:nth-child(3) { background-image: url('service3.jpg'); }
+.service-card:nth-child(4) { background-image: url('service4.jpg'); }
+.service-card:nth-child(5) { background-image: url('service5.jpg'); }
+.service-card:nth-child(6) { background-image: url('service6.webp'); }
+.service-card:nth-child(7) { background-image: url('service7.jpg'); }
+.service-card:nth-child(8) { background-image: url('service8.jpg__i=AA'); }
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-left-color: #00bfff;
+}
+
+/* Portfolio Section */
+#portfolio .container {
+  padding: 20px 0;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 310px;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.card .label {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact .container {
+  padding: 20px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form button:hover {
+  background-color: #0055aa;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  padding: 40px 5%;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-services li {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.footer-social a {
+  color: white;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.footer-social a:hover {
+  color: #00bfff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.whatsapp-btn {
+  width: 70px;
+  height: 70px;
+}
+
+/* Center Headings in Sections with Less Space */
+section {
+  text-align: center;
+}
+
+section h1, section h2 {
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 15px 20px;
+      position: relative;
+  }
+
+  .hamburger {
+      display: block; /* Show hamburger on mobile */
+  }
+
+  .navbar .nav-menu {
+      display: none; /* Hide menu by default */
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+      position: absolute;
+      top: 100%; /* Below navbar */
+      right: 20px; /* Align under hamburger (adjust padding matches navbar) */
+      width: 200px; /* Fixed width */
+      background-color: #f6f6f6; /* Light background */
+      color: #333; /* Dark text */
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+      border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+      opacity: 0; /* Start hidden for animation */
+      transform: translateY(-10px); /* Start slightly above for slide effect */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Animation */
+  }
+
+  .navbar .nav-menu.active {
+      display: flex; /* Show when active */
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Slide down to position */
+  }
+
+  .navbar .nav-menu li a {
+      color: #333; /* Dark text for light background */
+  }
+
+  .navbar .nav-menu li a:hover {
+      color: #0055aa; /* Darker blue for hover */
+  }
+
+  .hero-section {
+      padding: 50px 5%;
+      height: 200px;
+  }
+
+  .hero-section h1 {
+      font-size: 32px !important;
+  }
+
+  .hero-section p {
+      font-size: 16px !important;
+  }
+
+  .about-text {
+      width: 100%;
+  }
+
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+
+  .service-card {
+      padding: 20px;
+      min-height: 100px;
+      font-size: 1.1em;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 310px;
+  }
+
+  section h2 {
+      font-size: 28px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+      font-size: 1.5em;
+  }
+
+  .about-img {
+      width: 100%;
+      max-width: 280px;
+      height: 300px;
+  }
+
+  .services-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .service-card {
+      padding: 15px;
+      min-height: 80px;
+      font-size: 1em;
+  }
+
+  .whatsapp-btn {
+      width: 50px;
+      height: 50px;
+  }
+}
