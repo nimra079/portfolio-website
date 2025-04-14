@@ -65,8 +65,8 @@ body {
   background-image: url(hero-image.jpg);
   color: white;
   text-align: center;
-  padding: 100px 5%;
-  height: 250px;
+  padding: 190px 5%;
+  height: 160px;
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.80);
@@ -380,8 +380,8 @@ section h1, section h2 {
   }
 
   .hero-section {
-      padding: 50px 5%;
-      height: 200px;
+      padding: 100px 5%;
+      height: 120px;
   }
 
   .hero-section h1 {
